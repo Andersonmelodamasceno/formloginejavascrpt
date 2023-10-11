@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body class="cordocorpo">
+    <form class="form-container">
+        <label for="formulario1" class="centralizarform1"></label>
+        <input id="formulario1"  class="Email" type="text-align:center;" placeholder="Email address" required maxlength="100">
+        
+        <label for="formulario2" class="centralizarform2"></label>
+        <input id="formulario2"  class="Password" type="password" placeholder="password" required maxlength="100" >
+                <div class="remember-me">
+            <input type="checkbox" id="rememberMe" name="rememberMe">
+            <label for="rememberMe">Remember me</label>
+        </div>
+        <input type="button" class="botao" value="Sign up" onclick="myFunction()">
+        <hr class="linha"></hr>
+        <p class="paragrafo">By clicking sign up. you agree to the terms of use </p>
+    </form>
+
+    <p id="demo" class="bordacaixa"></p>
+
+    <script>
+        function myFunction() {
+            let emailcorreto = "romario@gmail.com";
+            let senhacorreta = "12345";
+            
+            let email = document.getElementById("formulario1").value;
+            let password = document.getElementById("formulario2").value;
+
+            if (email === emailcorreto && password === senhacorreta) {
+                document.getElementById("demo").innerHTML = "Bem vindo ao sistema: " + email;
+                document.getElementById("demo").style.color = "orange";
+            } else {
+                document.getElementById("demo").innerHTML = "Senhas ou Email incorretos.";
+                document.getElementById("demo").style.color = "red";
+            }
+        }
+    </script>
+	<style>
+       .paragrafo {
+       text-align:left;
+       font-size:14px;
+       }
+       
+       .form-container {
+            border: 1px solid #d4c0ff;
+            width: 250px;
+            length:250px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            background-color:#f3eae8;
+            border-radius: 5px;
+        }
+        
+       .h1{
+	    text-align: center}
+     
+        .Email, .Password, .botao {
+            border: bottom right radius 1px;
+            background-color: ##f3eae8;
+            color: black;
+            padding: 10px 50px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 10px auto;
+            width: 220px;
+            display: block;
+            text-align: center;
+        }
+
+        .botao {
+            background-color: hsla(236, 100%, 36%, 0.89);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 228px;
+        }
+
+ 
+        .Email, .Password {
+            width: 50%;
+            text-align: left;
+        }
+
+        .cordocorpo {
+            background-color: #FFFFF0;
+            text-align: center;
+            border: 1px;
+        }
+        .remember-me {
+            
+            margin-top: 10px;
+            margin-left:-90px;
+        }
+        .linha{ 
+            height: 0px;
+            width: 80%; 
+            background-color: black; 
+            margin: 20px auto;
+        }
+        
+    </style>
+</body>
+</html>
