@@ -1,101 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+
 </head>
-<body class="cordocorpo">
+<body class="bodycolor">
+
+
     <form class="form-container">
-        <label for="formulario1" class="centralizarform1"></label>
-        <input id="formulario1" class="Email" type="text" placeholder="Email address" required maxlength="100">
+        <label for="form1" class="centralizeform1"></label>
+        <input id="form1" class="Email" type="text" placeholder="Email address" required maxlength="100">
         
-        <label for "formulario2" class="centralizarform2"></label>
-        <input id="formulario2" class="Password" type="password" placeholder="password" required maxlength="100">
+        <label for="form2" class="centralizeform2"></label>
+        <input id="form2" class="Password" type="password" placeholder="password" required maxlength="100">
         <div class="remember-me">
             <input type="checkbox" id="rememberMe" name="rememberMe">
             <label for="rememberMe">Remember me</label>
         </div>
-        <input type="button" class="botao" value="Sign up" onclick="myFunction()">
+        <input type="button" class="button" value="Sign up" onclick="myFunction()">
         <hr class="linha"></hr>
         <p class="paragrafo">By clicking sign up, you agree to the terms of use.</p>
     </form>
 
-    <p id="demo" class="bordacaixa"></p>
-
-    <script>
-        function myFunction() {
-            let emailcorreto = "romario@gmail.com";
-            let senhacorreta = "12345";
-            
-            let email = document.getElementById("formulario1").value;
-            let password = document.getElementById("formulario2").value;
-            let botao = document.querySelector(".botao");
-
-            if (email === emailcorreto && password === senhacorreta) {
-                document.getElementById("demo").innerHTML = "Bem vindo ao sistema: " + email;
-                document.getElementById("demo").style.color = "orange";
-                botao.style.backgroundColor = "orange";
-            } else {
-                document.getElementById("demo").innerHTML = "Senhas ou Email incorretos.";
-                document.getElementById("demo").style.color = "red";
-                botao.style.backgroundColor = "red";
-            }
-        }
-    </script>
-
-    <style>
-       .paragrafo {
-           text-align: left;
-           font-size: 14px;
-       }
-       
-       .form-container {
-           border: 1px solid #d4c0ff;
-           width: 320px;
-           margin: 0 auto;
-           padding: 20px;
-           background-color: #F0FFF0;
-           border-radius: 5px;
-           height : 330px;
-          
-       }
-        
-        .Email, .Password, .botao {
-            border: 1px solid #f3eae8;
-            background-color: white;
-            color: black;
-            padding: 10px 20px;
-            margin: 10px;
-            cursor: pointer;
-            border-radius: 5px;
-            width: 85%;
-        }
-
-        .botao {
-            background-color: hsla(236, 100%, 36%, 0.89);
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            width: 100%;
-        }
-
-        .cordocorpo {
-            background-color: #FFFFF0;
-            text-align: center;
-            border: 1px;
-        }
-
-        .remember-me {
-            margin-top: 10px;
-            margin-left: -185px;
-        }
-
-        .linha {
-            height: 0px;
-            width: 100%;
-            background-color: black;
-            margin: 28px auto;
-        }
-    </style>
-</body>
+    <p id="demo" class="boxedge"></p>  
+  
+<script src="script.js"></script>
 </html>

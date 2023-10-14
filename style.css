@@ -1,0 +1,56 @@
+ 
+	 .paragrafo {
+           text-align: left;
+           font-size: 14px;
+       }
+       
+       .form-container {
+           border: 1px solid #d4c0ff;
+           width: 320px;
+           margin: 0 auto;
+           padding: 20px;
+           background-color: #F0FFF0;
+           border-radius: 5px;
+           height : 330px;
+          
+       }
+        
+        .Email, .Password, .button {
+            border: 1px solid #f3eae8;
+            background-color: white;
+            color: black;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 85%;
+        }
+
+        .button{
+            background-color: hsla(236, 100%, 36%, 0.89);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .boxedge {
+            background-color: #FFFFF0;
+            text-align: center;
+            border: 1px;
+        }
+
+        .remember-me {
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        .linha {
+            height: 0px;
+            width: 100%;
+            background-color: black;
+            margin: 28px auto;
+        }
+	
