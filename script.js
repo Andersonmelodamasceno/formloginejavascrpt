@@ -1,13 +1,27 @@
- 
-        function myFunction() {
-            let emailcorreto = "romario@gmail.com";
-            let senhacorreta = "12345";
-            
-            let email = document.getElementById("form1").value;
-            let password = document.getElementById("form2").value;
-            let button = document.querySelector(".button");
+async function myFunction(){
+let email = document.getElementById("form1").value;
+let password = document.getElementById("form2").value;
 
-            if (email === emailcorreto && password === senhacorreta) {
+const data = { email: email, password: password };
+
+const response = await fetch("https://localhost:7273/api/Login/PostTesteLogin", {
+  method: "POST",
+  mode: "cors",
+  cache: "no-cache",
+  credentials: "same-origin", 
+  headers: {
+    "Content-Type": "application/json",
+  },
+  redirect: "follow", 
+  referrerPolicy: "no-referrer", 
+  body: JSON.stringify(data),
+});
+   responseJson = await response.json();
+  setTimeout( async function(){
+ 
+	   let button = document.querySelector(".button");
+	    
+       if (responseJson.result == "sucesso") {
                 document.getElementById("demo").innerHTML = "Bem vindo ao sistema: " + email;
                 document.getElementById("demo").style.color = "orange";
                 button.style.backgroundColor = "orange";
@@ -16,5 +30,5 @@
                 document.getElementById("demo").style.color = "red";
                 button.style.backgroundColor = "red";
             }
-        }
-   
+  },2000);
+} 
